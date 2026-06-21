@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Bread Of Life Farms | Housing & Harvesting Hope in Oklahoma</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://github.com/Best-Businesses/BOLF/raw/main/Favicon-BOLF.png" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #2E241F;
+            color: #F1EAD8;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --forest-deep: #1F3D2F;
+            --pine-green: #2F5E3A;
+            --burnt-orange: #C76E2E;
+            --rust: #9E5024;
+            --harvest-gold: #D99E3E;
+            --dark-earth: #4A3729;
+            --wheat: #EBD8B2;
+            --charcoal-warm: #2D2823;
+            --shadow-dark: 0 12px 28px rgba(0, 0, 0, 0.3);
+            --shadow-light: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .site-header {
+            background: #2A241F;
+            border-bottom: 4px solid var(--burnt-orange);
+            padding: 1.2rem 0 0.8rem 0;
+            box-shadow: var(--shadow-dark);
+            position: relative;
+            width: 100%;
+        }
+
+        .logo-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .logo-img {
+            max-width: 260px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            animation: floatLogo 3.2s ease-in-out infinite;
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+            transition: filter 0.3s;
+        }
+
+        .logo-img:hover {
+            filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.5));
+            animation-play-state: paused;
+        }
+
+        @keyframes floatLogo {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .logo-img {
+                max-width: 320px;
+            }
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: var(--wheat);
+            background: #4E3629;
+            display: inline-block;
+            padding: 0.3rem 1.3rem;
+            border-radius: 60px;
+            margin-top: 0.6rem;
+            font-weight: 600;
+            border: 1px solid var(--harvest-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0.8rem 0 0.5rem 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--wheat);
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: var(--burnt-orange);
+            color: var(--harvest-gold);
+        }
+
+        /* --- BUTTONS --- */
+        .btn-volunteer {
+            background: linear-gradient(135deg, var(--pine-green) 0%, var(--forest-deep) 100%);
+            color: #FCF7E6;
+            border: 2px solid var(--harvest-gold);
+            padding: 0.9rem 2.2rem;
+            font-size: 1.1rem;
+            font-weight: 800;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+            font-family: inherit;
+            text-decoration: none;
+        }
+
+        .btn-volunteer i {
+            font-size: 1.2rem;
+        }
+
+        .btn-volunteer:hover {
+            background: linear-gradient(135deg, #3C7848, #1A4A2A);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 22px black;
+            border-color: #F4BC6D;
+        }
+
+        .btn-google-form {
+            background: linear-gradient(135deg, #C76E2E, #9E5024);
+            color: #FFF8EE;
+            border: 2px solid #F4BC6D;
+            padding: 0.9rem 2.4rem;
+            font-size: 1.15rem;
+            font-weight: 800;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+            font-family: inherit;
+            text-decoration: none;
+        }
+
+        .btn-google-form i {
+            font-size: 1.3rem;
+        }
+
+        .btn-google-form:hover {
+            background: linear-gradient(135deg, #E0843A, #B05A28);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+            border-color: #FFD699;
+        }
+
+        .btn-close {
+            background: #3D2A1C;
+            border: 1px solid var(--harvest-gold);
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+            color: #F1DEC6;
+        }
+
+        .btn-close:hover {
+            background: var(--burnt-orange);
+            color: #1E1A15;
+            border-color: #F5E2B2;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Sections */
+        section {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(255, 215, 150, 0.2);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #F5D99B, #E6A96D);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 1.8rem;
+            letter-spacing: -0.2px;
+            text-align: center;
+            border-bottom: 4px solid var(--burnt-orange);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .strategy-box {
+            background: #3F2E24;
+            padding: 2rem 2rem;
+            border-radius: 2rem;
+            line-height: 1.7;
+            font-size: 1.08rem;
+            color: #FCF3E3;
+            box-shadow: var(--shadow-dark);
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #BD7A3A;
+        }
+
+        .strategy-box p {
+            margin-bottom: 1rem;
+        }
+
+        .cards-model {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2rem 0 1rem;
+        }
+
+        .model-card {
+            flex: 1 1 220px;
+            background: #32271F;
+            border-radius: 36px;
+            padding: 1.5rem 1rem;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            border: 1px solid #966B3E;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+            background: #3F2C1F;
+        }
+
+        .model-card i {
+            font-size: 2.6rem;
+            background: linear-gradient(135deg, var(--harvest-gold), #F5AC78);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.8rem;
+        }
+
+        .model-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+            color: #FADFAD;
+        }
+
+        .model-card p {
+            font-size: 0.9rem;
+            color: #E9DBCB;
+        }
+
+        .volunteer-hidden-section {
+            display: none;
+            background: #33251D;
+            border-radius: 2rem;
+            margin: 1rem 0 2rem 0;
+            padding: 2rem;
+            border: 2px solid var(--burnt-orange);
+            box-shadow: var(--shadow-dark);
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .volunteer-hidden-section.visible {
+            display: block;
+            animation: fadeSlideUp 0.4s ease-out;
+        }
+
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .volunteer-card {
+            background: #2C221B;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border-left: 5px solid var(--harvest-gold);
+            color: #F7ECD9;
+        }
+
+        .volunteer-card h4 {
+            color: #F5BC7A;
+        }
+
+        .hero {
+            background: #2F251E;
+            border-radius: 2rem;
+            padding: 2rem 1.5rem;
+            margin: 1.5rem 0 1rem;
+            text-align: center;
+            box-shadow: var(--shadow-dark);
+            border: 1px solid #9C673C;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            background: linear-gradient(to right, #FADA9E, #E5985C);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: #F3E1C0;
+        }
+
+        .verse {
+            color: #F2BC79;
+            font-weight: 500;
+        }
+
+        #about div {
+            background: #2F2A22;
+            border-radius: 2rem;
+            padding: 1.8rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #EFE3CF;
+            border: 1px solid #A76F3B;
+        }
+
+        .footer {
+            background: #1E1915;
+            color: #CFC3AE;
+            border-top: 6px solid var(--burnt-orange);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: var(--harvest-gold);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.2rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .logo-img {
+                max-width: 220px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-google-form,
+            .btn-volunteer {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container logo-area">
+            <img class="logo-img" src="https://github.com/Best-Businesses/BOLF/raw/main/Logo-BOLF.png" alt="Bread Of Life Farms logo - floating emblem of hope" />
+            <div class="tagline">
+                <i class="fas fa-seedling"></i> cultivating dignity • housing hope • faith in action
+            </div>
+            <div class="nav-links">
+                <a href="#strategy">Our Strategy</a>
+                <a href="#model">The Model</a>
+                <a href="#about">Mission</a>
+                <!-- Google Form button in nav -->
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScgz2a-AdF4r-m8Nhxc4fiZKc_BIa7me8c5f-y_lpyQEbh7fw/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="background:linear-gradient(135deg,#C76E2E,#9E5024);color:#FFF8EE;border:2px solid #F4BC6D;padding:0.4rem 1.4rem;border-radius:60px;border-bottom-color:#F4BC6D;font-weight:800;display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
+                <i class="fas fa-hands-helping"></i> Volunteer
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="hero">
+        <h1>Bread Of Life Farms</h1>
+        <p><strong>Permanent housing + farm employment</strong> for Oklahoma's homeless neighbors.<br /> Founded in 2026 · Christian-based · Rooted in redemption & land stewardship.</p>
+        <div class="verse">"I am the bread of life. Whoever comes to me will never go hungry." — John 6:35</div>
+
+        <div class="hero-buttons">
+            <button id="volunteerBtnMain" class="btn-volunteer">
+                <i class="fas fa-chevron-down"></i> Can you Volunteer?
+            </button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScgz2a-AdF4r-m8Nhxc4fiZKc_BIa7me8c5f-y_lpyQEbh7fw/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-google-form">
+            <i class="fas fa-pen-fancy"></i> Sign Up Now
+        </a>
+    </div>
+</div>
+
+<!-- Organization Strategy Section -->
+<section id="strategy">
+    <h2 class="section-title">Organization strategy</h2>
+    <div class="strategy-box">
+        <p>Our organization plans to lease and acquire land, which will be certified for agricultural production. The land will provide housing for homeless individuals who will participate in farm operations. The farm will supply fresh produce to food pantries and sell agriculture products & goods at fair market value. We will also produce and sell compost and fertilizer. Participants will be encouraged to enroll in online college courses to further their education. Upon successful completion of the program, individuals will receive permanent land to call home, along with assistance in constructing a tiny home.</p>
+    </div>
+</section>
+
+<!-- The Model Section -->
+<section id="model">
+    <h2 class="section-title">Our life-transforming model</h2>
+    <div class="cards-model">
+        <div class="model-card"><i class="fas fa-home"></i><h3>Permanent Housing</h3><p>Not a shelter. private, safe, housing on farmland for every resident.</p></div>
+        <div class="model-card"><i class="fas fa-tractor"></i><h3>Meaningful Employment</h3><p>Paid farm work — produce for food banks, markets, and agriculture product sales.</p></div>
+        <div class="model-card"><i class="fas fa-graduation-cap"></i><h3>Online College</h3><p>Encouraged & supported to earn degrees. Laptops, internet, assistance available through other organizations.</p></div>
+        <div class="model-card"><i class="fas fa-tree"></i><h3>Land Forever + Help building a home</h3><p>Graduates receive land plus construction help for a tiny home.</p></div>
+    </div>
+    <p style="margin-top:1.5rem;background:#413027;padding:1rem;border-radius:2rem;max-width:700px;margin-left:auto;margin-right:auto;color:#F4D7A8;font-weight:500;">
+        <i class="fas fa-church"></i> Rooted in Christian compassion — every neighbor is seen, loved, and empowered.
+    </p>
+</section>
+
+<!-- Beginning phase -->
+<section id="about">
+    <div>
+        <h3 style="font-size:1.5rem;margin-bottom:0.6rem;color:#F0C08A;"><i class="fas fa-sprout"></i> Beginning phase: June 2026</h3>
+        <p>As of this month, Bread Of Life Farms is officially forming as a 501(c)(3) nonprofit in Oklahoma. We are currently identifying initial land leases, building our advisory board, and recruiting founding partners. Your prayers, mentorship, and volunteer hands will help us break ground. Together, we can turn empty fields into sanctuaries of restoration.</p>
+    </div>
+</section>
+
+<!-- HIDDEN VOLUNTEER SECTION (triggered by "Can you Volunteer?" button) -->
+<div id="volunteerHiddenSection" class="volunteer-hidden-section container" style="margin: 0 auto 2rem auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+        <h2 style="font-family:'Playfair Display';font-size:1.9rem;color:#F0BC78;margin:0;">
+            <i class="fas fa-users"></i> Volunteer · Become the hands of hope
+        </h2>
+        <button id="closeVolunteerBtn" class="btn-close"><i class="fas fa-times"></i> Close section</button>
+    </div>
+    <p style="font-size:1.1rem;margin:1.5rem 0 0.5rem;text-align:center;">
+        We are in the <strong>early formation stage</strong>, and we need a community of compassionate servants. Your time and presence can change lives.
+    </p>
+
+    <!-- Google Form CTA inside the volunteer section -->
+    <div style="text-align:center;margin:1.2rem 0 1.8rem 0;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScgz2a-AdF4r-m8Nhxc4fiZKc_BIa7me8c5f-y_lpyQEbh7fw/viewform?usp=header"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-google-form" style="font-size:1.2rem;padding:1rem 2.8rem;">
+        <i class="fas fa-pen-fancy"></i> Fill out the Volunteer Form
+    </a>
+    <p style="margin-top:0.4rem;font-size:0.9rem;color:#DCC29E;">
+        <i class="fas fa-external-link-alt"></i> Opens in Google Forms — takes 2–3 minutes
+    </p>
+</div>
+
+<div class="volunteer-flex" style="display:flex;flex-wrap:wrap;gap:2rem;margin:1.5rem 0;">
+    <!-- Mentor / open ear -->
+    <div class="volunteer-card" style="flex:1;">
+        <h4><i class="fas fa-comment-dots"></i> Mentors & “Open Ear” Companions</h4>
+        <p>We need mentors for homeless people and essentially just need people to be an open ear. Many future residents have experienced isolation and trauma. We need Christian mentors willing to walk alongside them — to listen, pray, share life skills, and offer consistent emotional support.</p>
+        <ul>
+            <li>✨ One-on-one discipleship & encouragement</li>
+            <li>✨ Assist with goal setting (education, finances, health)</li>
+            <li>✨ Just being an open ear without judgment</li>
+        </ul>
+    </div>
+
+    <!-- Building campsites, trails, kitchen duties -->
+    <div class="volunteer-card" style="flex:1;">
+        <h4><i class="fas fa-hammer"></i> Farm & Facility Builders</h4>
+        <p>We also need volunteers to help build campsites, trails, for kitchen duties, etc. Before residents arrive, we need to construct the physical heart of the community.</p>
+        <ul>
+            <li>🏕️ Building primitive campsites for retreats & transitional phases</li>
+            <li>🌿 Creating accessible nature trails across farmland</li>
+            <li>🍲 Kitchen duties: preparing meals for volunteer crews and future community dinners</li>
+            <li>🚜 Erosion control, fencing, greenhouse assembly</li>
+            <li>♻️ Compost station construction & gardening infrastructure</li>
+        </ul>
+        <p><i class="fas fa-tools"></i> No experience necessary — just a willing heart and hands!</p>
+    </div>
+</div>
+
+<!-- Removed the "Additional ways to serve" block and the quick interest form entirely -->
+<p style="margin-top:1.5rem;font-size:0.9rem;text-align:center;color:#E6D4BA;">
+    <i class="fas fa-seedling"></i> “Whatever you did for one of the least of these brothers and sisters of mine, you did for me.” — Matthew 25:40
+</p>
+</div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p><i class="fas fa-church"></i> Bread Of Life Farms — Est. 2026 · Oklahoma, USA</p>
+        <p>Bringing hope, feeding communities, and building permanent homes for our homeless neighbors.</p>
+        <p>Contact: | <i class="fas fa-phone-alt"></i> 405-998-8232</p>
+        <p style="margin-top:0.8rem;">© 2026 Bread Of Life Farms — Faith, Farming, Forever Homes</p>
+    </div>
+</footer>
+
+<script>
+    const volunteerSection = document.getElementById('volunteerHiddenSection');
+    const volunteerBtn = document.getElementById('volunteerBtnMain');
+    const closeVolunteerBtn = document.getElementById('closeVolunteerBtn');
+
+    function revealVolunteerSection() {
+        if (!volunteerSection.classList.contains('visible')) {
+            volunteerSection.classList.add('visible');
+        }
+        volunteerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function hideVolunteerSection() {
+        volunteerSection.classList.remove('visible');
+    }
+
+    volunteerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        revealVolunteerSection();
+    });
+
+    closeVolunteerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideVolunteerSection();
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetElem = document.querySelector(href);
+                if (targetElem) targetElem.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Ensure volunteer section is hidden on page load
+    volunteerSection.classList.remove('visible');
+</script>
+
+</body>
+</html>
