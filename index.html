@@ -395,6 +395,54 @@
             color: var(--harvest-gold);
         }
 
+        /* --- NEW: LEGAL NOTICE BAR (top of page) --- */
+        .legal-notice {
+            background: linear-gradient(135deg, #1E3A2E, #2A4F3A);
+            border-bottom: 3px solid var(--harvest-gold);
+            padding: 0.9rem 1.5rem;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #F5ECD6;
+            letter-spacing: 0.3px;
+            box-shadow: inset 0 -2px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem 1.2rem;
+        }
+
+        .legal-notice i {
+            color: var(--harvest-gold);
+            font-size: 1.1rem;
+        }
+
+        .legal-notice .badge {
+            background: var(--burnt-orange);
+            color: #1E1A15;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.25rem 0.9rem;
+            border-radius: 60px;
+            display: inline-block;
+            border: 1px solid #F4BC6D;
+        }
+
+        @media (max-width: 600px) {
+            .legal-notice {
+                font-size: 0.85rem;
+                padding: 0.7rem 1rem;
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .legal-notice .badge {
+                font-size: 0.6rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 0 1.2rem;
@@ -421,6 +469,16 @@
     </style>
 </head>
 <body>
+
+    <!-- ====== NEW LEGAL NOTICE ====== -->
+    <div class="legal-notice">
+        <i class="fas fa-gavel"></i>
+        <span>
+            <strong>Bread of Life Farms, Inc.</strong> is a nonprofit corporation duly registered with the State of Oklahoma.
+            We are currently in the process of applying for federal 501(c)(3) tax-exempt status.
+        </span>
+        <span class="badge"><i class="fas fa-clock"></i> pending</span>
+    </div>
 
     <header class="site-header">
         <div class="container logo-area">
@@ -464,9 +522,11 @@
 
 <!-- Organization Strategy Section -->
 <section id="strategy">
-    <h2 class="section-title">Organization strategy</h2>
+    <h2 class="section-title">Mission</h2>
     <div class="strategy-box">
-        <p>Our organization plans to lease and acquire land, which will be certified for agricultural production. The land will provide housing for homeless individuals who will participate in farm operations. The farm will supply fresh produce to food pantries and sell agriculture products & goods at fair market value. We will also produce and sell compost and fertilizer. Participants will be encouraged to enroll in online college courses to further their education. Upon successful completion of the program, individuals will receive permanent land to call home, along with assistance in constructing a tiny home.</p>
+        <p>Bread of Life Farms exists to help individuals and families experiencing homelessness achieve stability and self-sufficiency.
+We acquire and develop land for certified agricultural production, grow and sell farm products, and use the proceeds to fund compassionate programs including sack lunches, food boxes, food pantries, and structured encampments with restrooms, showers, and supportive services.
+Through practical help and life skills development, we walk alongside participants — and upon successful completion of our program, we assist them in obtaining a small piece of land and building a tiny home so they can transition into long-term independence.</p>
     </div>
 </section>
 
@@ -487,8 +547,8 @@
 <!-- Beginning phase -->
 <section id="about">
     <div>
-        <h3 style="font-size:1.5rem;margin-bottom:0.6rem;color:#F0C08A;"><i class="fas fa-sprout"></i> Beginning phase: June 2026</h3>
-        <p>As of this month, Bread Of Life Farms is officially forming as a 501(c)(3) nonprofit in Oklahoma. We are currently identifying initial land leases, building our advisory board, and recruiting founding partners. Your prayers, mentorship, and volunteer hands will help us break ground. Together, we can turn empty fields into sanctuaries of restoration.</p>
+        <h3 style="font-size:1.5rem;margin-bottom:0.6rem;color:#F0C08A;"><i class="fas fa-sprout"></i> Beginning phase: July 2026</h3>
+        <p>As of this month, Bread Of Life Farms is officially forming as a 501(c)(3) nonprofit in Oklahoma. We are currently identifying initial land leases, building our advisory committee, and recruiting founding partners. Your prayers, mentorship, and volunteer hands will help us break ground. Together, we can turn empty fields into sanctuaries of restoration.</p>
     </div>
 </section>
 
