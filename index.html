@@ -258,49 +258,79 @@
             margin-bottom: 1rem;
         }
 
-        .cards-model {
+        /* ===== NEW: STAGE CARDS (replaces .cards-model) ===== */
+        .stage-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
+            flex-direction: column;
+            gap: 3.5rem;
             margin: 2rem 0 1rem;
         }
 
-        .model-card {
-            flex: 1 1 220px;
+        .stage-item {
             background: #32271F;
-            border-radius: 36px;
-            padding: 1.5rem 1rem;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            border-radius: 2.5rem;
+            padding: 2rem 2rem 1.8rem;
             border: 1px solid #966B3E;
-            text-align: center;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .model-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
-            background: #3F2C1F;
+        .stage-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
-        .model-card i {
-            font-size: 2.6rem;
-            background: linear-gradient(135deg, var(--harvest-gold), #F5AC78);
+        .stage-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #F5D99B, #E6A96D);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            margin-bottom: 0.8rem;
+            text-align: center;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid rgba(214, 159, 62, 0.3);
+            padding-bottom: 0.6rem;
+            display: inline-block;
+            width: 100%;
         }
 
-        .model-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.6rem;
-            color: #FADFAD;
+        .stage-image {
+            width: 100%;
+            height: auto;
+            border-radius: 1.8rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            display: block;
+            transition: filter 0.3s;
+            border: 1px solid #7A5A33;
         }
 
-        .model-card p {
-            font-size: 0.9rem;
-            color: #E9DBCB;
+        .stage-image:hover {
+            filter: brightness(1.05) contrast(1.02);
+        }
+
+        /* responsive tweaks for stage section */
+        @media (max-width: 768px) {
+            .stage-item {
+                padding: 1.2rem 1.2rem 1.2rem;
+            }
+            .stage-header {
+                font-size: 1.8rem;
+            }
+            .stage-image {
+                border-radius: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stage-item {
+                padding: 0.8rem 0.8rem 0.8rem;
+            }
+            .stage-header {
+                font-size: 1.5rem;
+            }
         }
 
         .volunteer-hidden-section {
@@ -395,7 +425,7 @@
             color: var(--harvest-gold);
         }
 
-        /* --- NEW: LEGAL NOTICE BAR (top of page) --- */
+        /* --- LEGAL NOTICE BAR --- */
         .legal-notice {
             background: linear-gradient(135deg, #1E3A2E, #2A4F3A);
             border-bottom: 3px solid var(--harvest-gold);
@@ -470,7 +500,7 @@
 </head>
 <body>
 
-    <!-- ====== NEW LEGAL NOTICE ====== -->
+    <!-- LEGAL NOTICE -->
     <div class="legal-notice">
         <i class="fas fa-gavel"></i>
         <span>
@@ -490,7 +520,6 @@
                 <a href="#strategy">Our Mission</a>
                 <a href="#model">The Model</a>
                 <a href="#about">July Plans</a>
-                <!-- Google Form button in nav -->
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScgz2a-AdF4r-m8Nhxc4fiZKc_BIa7me8c5f-y_lpyQEbh7fw/viewform?usp=header"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -525,23 +554,42 @@
     <h2 class="section-title">Mission</h2>
     <div class="strategy-box">
         <p>Bread of Life Farms exists to help individuals and families experiencing homelessness achieve stability and self-sufficiency.
-We acquire and develop land for certified agricultural production, grow and sell farm products, and use the proceeds to fund compassionate programs including sack lunches, food boxes, food pantries, and structured encampments with restrooms, showers, and supportive services.
-Through practical help and life skills development, we walk alongside participants — and upon successful completion of our program, we assist them in obtaining a small piece of land and building a tiny home so they can transition into long-term independence.</p>
+        We acquire and develop land for certified agricultural production, grow and sell farm products, and use the proceeds to fund compassionate programs including sack lunches, food boxes, food pantries, and structured encampments with restrooms, showers, and supportive services.
+        Through practical help and life skills development, we walk alongside participants — and upon successful completion of our program, we assist them in obtaining a small piece of land and building a tiny home so they can transition into long-term independence.</p>
     </div>
 </section>
 
-<!-- The Model Section -->
+<!-- ====== THE MODEL SECTION — REPLACED WITH STAGE IMAGES ====== -->
 <section id="model">
-    <h2 class="section-title">Our life-transforming model</h2>
-    <div class="cards-model">
-        <div class="model-card"><i class="fas fa-home"></i><h3>Permanent Housing</h3><p>Not a shelter. private, safe, housing on farmland for every resident.</p></div>
-        <div class="model-card"><i class="fas fa-tractor"></i><h3>Meaningful Employment</h3><p>Paid farm work — produce for food banks, markets, and agriculture product sales.</p></div>
-        <div class="model-card"><i class="fas fa-graduation-cap"></i><h3>Online College</h3><p>Encouraged & supported to earn degrees. Laptops, internet, assistance available through other organizations.</p></div>
-        <div class="model-card"><i class="fas fa-tree"></i><h3>Land Forever + Help building a home</h3><p>Graduates receive land plus construction help for a tiny home.</p></div>
+    <h2 class="section-title">Our Land Development Stages</h2>
+
+    <div class="stage-container">
+
+        <!-- Stage 1 -->
+        <div class="stage-item">
+            <h3 class="stage-header">Stage 1</h3>
+            <img class="stage-image"
+            src="https://github.com/Best-Businesses/BOLF/raw/main/BOLF-Land-Chart-1.png"
+            alt="Stage 1 – Land chart showing initial acquisition and planning" />
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="stage-item">
+            <h3 class="stage-header">Stage 2</h3>
+            <img class="stage-image"
+            src="https://github.com/Best-Businesses/BOLF/raw/main/BOLF-Land-Chart-2.png"
+            alt="Stage 2 – Land chart showing development and infrastructure" />
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="stage-item">
+            <h3 class="stage-header">Stage 3</h3>
+            <img class="stage-image"
+            src="https://github.com/Best-Businesses/BOLF/raw/main/BOLF-Land-Chart-3.png"
+            alt="Stage 3 – Land chart showing full build-out and permanent housing" />
+        </div>
+
     </div>
-    <p style="margin-top:1.5rem;background:#413027;padding:1rem;border-radius:2rem;max-width:700px;margin-left:auto;margin-right:auto;color:#F4D7A8;font-weight:500;">
-        <i class="fas fa-church"></i> Rooted in Christian compassion — every neighbor is seen, loved, and empowered.
-    </p>
 </section>
 
 <!-- Beginning phase -->
@@ -552,7 +600,7 @@ Through practical help and life skills development, we walk alongside participan
     </div>
 </section>
 
-<!-- HIDDEN VOLUNTEER SECTION (triggered by "Can you Volunteer?" button) -->
+<!-- HIDDEN VOLUNTEER SECTION -->
 <div id="volunteerHiddenSection" class="volunteer-hidden-section container" style="margin: 0 auto 2rem auto;">
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
         <h2 style="font-family:'Playfair Display';font-size:1.9rem;color:#F0BC78;margin:0;">
@@ -564,7 +612,6 @@ Through practical help and life skills development, we walk alongside participan
         We are in the <strong>early formation stage</strong>, and we need a community of compassionate servants. Your time and presence can change lives.
     </p>
 
-    <!-- Google Form CTA inside the volunteer section -->
     <div style="text-align:center;margin:1.2rem 0 1.8rem 0;">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScgz2a-AdF4r-m8Nhxc4fiZKc_BIa7me8c5f-y_lpyQEbh7fw/viewform?usp=header"
         target="_blank"
@@ -578,7 +625,6 @@ Through practical help and life skills development, we walk alongside participan
 </div>
 
 <div class="volunteer-flex" style="display:flex;flex-wrap:wrap;gap:2rem;margin:1.5rem 0;">
-    <!-- Mentor / open ear -->
     <div class="volunteer-card" style="flex:1;">
         <h4><i class="fas fa-comment-dots"></i> Mentors & “Open Ear” Companions</h4>
         <p>We need mentors for homeless people and essentially just need people to be an open ear. Many future residents have experienced isolation and trauma. We need Christian mentors willing to walk alongside them — to listen, pray, share life skills, and offer consistent emotional support.</p>
@@ -589,7 +635,6 @@ Through practical help and life skills development, we walk alongside participan
         </ul>
     </div>
 
-    <!-- Building campsites, trails, kitchen duties -->
     <div class="volunteer-card" style="flex:1;">
         <h4><i class="fas fa-hammer"></i> Farm & Facility Builders</h4>
         <p>We also need volunteers to help build campsites, trails, for kitchen duties, etc. Before residents arrive, we need to construct the physical heart of the community.</p>
@@ -604,7 +649,6 @@ Through practical help and life skills development, we walk alongside participan
     </div>
 </div>
 
-<!-- Removed the "Additional ways to serve" block and the quick interest form entirely -->
 <p style="margin-top:1.5rem;font-size:0.9rem;text-align:center;color:#E6D4BA;">
     <i class="fas fa-seedling"></i> “Whatever you did for one of the least of these brothers and sisters of mine, you did for me.” — Matthew 25:40
 </p>
@@ -646,7 +690,6 @@ Through practical help and life skills development, we walk alongside participan
         hideVolunteerSection();
     });
 
-    // Smooth scroll for nav links
     document.querySelectorAll('.nav-links a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -658,7 +701,6 @@ Through practical help and life skills development, we walk alongside participan
         });
     });
 
-    // Ensure volunteer section is hidden on page load
     volunteerSection.classList.remove('visible');
 </script>
 
