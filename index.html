@@ -190,7 +190,7 @@
             border-color: #FFD699;
         }
 
-        /* --- NEW: Free Business Tools button (distinct teal/blue) --- */
+        /* --- Free Business Tools button (distinct teal/blue) --- */
         .btn-free-tools {
             background: linear-gradient(135deg, #1A6B6B, #0E4A4A);
             color: #F0FAF5;
@@ -220,6 +220,38 @@
             transform: translateY(-3px) scale(1.02);
             box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
             border-color: #7EDDDC;
+        }
+
+        /* --- NEW: Christian Friendly Games button (purple/plum) --- */
+        .btn-games {
+            background: linear-gradient(135deg, #6B3A7A, #4A2A5A);
+            color: #F5EEF8;
+            border: 2px solid #B28BC6;
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 800;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            font-family: inherit;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-games i {
+            font-size: 1.1rem;
+            color: #D8B4E2;
+        }
+
+        .btn-games:hover {
+            background: linear-gradient(135deg, #7F4A91, #5A3470);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+            border-color: #C9A3D9;
         }
 
         .btn-close {
@@ -290,7 +322,7 @@
             margin-bottom: 1rem;
         }
 
-        /* ===== NEW: STAGE CARDS (replaces .cards-model) ===== */
+        /* ===== STAGE CARDS ===== */
         .stage-container {
             display: flex;
             flex-direction: column;
@@ -343,7 +375,6 @@
             filter: brightness(1.05) contrast(1.02);
         }
 
-        /* responsive tweaks for stage section */
         @media (max-width: 768px) {
             .stage-item {
                 padding: 1.2rem 1.2rem 1.2rem;
@@ -557,7 +588,8 @@
                 <a href="#strategy">Our Mission</a>
                 <a href="#model">The Model</a>
                 <a href="#about">July Plans</a>
-                <!-- NEW: Free Business Tools button with chainsaw + hammer icons, distinct teal color -->
+
+                <!-- Free Business Tools (teal) -->
                 <a href="https://titanbusinesspros.github.io/BOLF-Master-APP/"
                    target="_blank"
                    rel="noopener noreferrer"
@@ -566,6 +598,18 @@
                     Free Business Tools
                     <i class="fas fa-hammer"></i>
                 </a>
+
+                <!-- NEW: Christian Friendly Games (purple) -->
+                <a href="https://titanbusinesspros.github.io/BOLF-Gaming-Platform/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-games">
+                    <i class="fas fa-gamepad"></i>
+                    Christian Friendly Games
+                    <i class="fas fa-dove"></i>
+                </a>
+
+                <!-- Volunteer button (orange) -->
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScgz2a-AdF4r-m8Nhxc4fiZKc_BIa7me8c5f-y_lpyQEbh7fw/viewform?usp=header"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -605,7 +649,7 @@
     </div>
 </section>
 
-<!-- ====== THE MODEL SECTION — REPLACED WITH STAGE IMAGES ====== -->
+<!-- ====== THE MODEL SECTION — STAGE IMAGES ====== -->
 <section id="model">
     <h2 class="section-title">Our Land Development Stages</h2>
 
